@@ -33,8 +33,11 @@ require([
 				return _.template("<td colspan='2'>empty</td>");
 			}
 		}),
-		PersonCollectionView = Marionette.CollectionView.extend({
-			tagName: 'table',
+		PersonCollectionView = Marionette.CompositeView.extend({
+			itemViewContainer: 'tbody',
+			template: function () {
+				return _.template("<table><thead><tr><td>first name</td><td>last name</td></tr></thead><tbody></tbody></table>");
+			},
 			itemView: PersonView,
 			emptyView: EmptyView
 		});
