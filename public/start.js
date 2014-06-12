@@ -36,7 +36,7 @@ require([
 		PersonCollectionView = Marionette.CompositeView.extend({
 			itemViewContainer: 'tbody',
 			template: function () {
-				return _.template("<table><thead><tr><td>first name</td><td>last name</td></tr></thead><tbody></tbody></table>");
+				return _.template("<table><thead><tr><th>first name</th><th>last name</th></tr></thead><tbody></tbody></table>");
 			},
 			itemView: PersonView,
 			emptyView: EmptyView
